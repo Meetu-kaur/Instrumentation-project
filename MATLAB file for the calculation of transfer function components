@@ -1,0 +1,22 @@
+clc;clear;close;
+
+%% inputs
+L=100;
+g=980;
+viscosity=0.006244;
+density=0.922;
+D=[0.11; 0.21; 0.31];
+tau=sqrt(2*L./(3*g));
+zeta1=8*viscosity.*sqrt(3*L./(2*g))/(density*D(1).^2);
+zeta2=8*viscosity.*sqrt(3*L./(2*g))/(density*D(2).^2);
+zeta3=8*viscosity.*sqrt(3*L./(2*g))/(density*D(3).^2);
+
+
+
+%% Answer
+Ans1 = 'tau',tau
+Ans2 = 'zeta',zeta1, zeta2, zeta3
+val=tau.^2
+val1 = 2*zeta1*tau
+val2 = 2*zeta2*tau
+val3 = 2*zeta3*tau
